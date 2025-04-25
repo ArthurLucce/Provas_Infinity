@@ -1,0 +1,44 @@
+# Função principal
+def calcular_media():
+    # Solicita o número de alunos
+    num_alunos = int(input("Digite o número de alunos: "))
+    
+    # Inicializa a variável para a soma das médias dos alunos
+    soma_medianotas = 0
+    
+    # Loop para iterar sobre cada aluno
+    for i in range(num_alunos):
+        print(f"\nAluno {i+1}:")
+        
+        # Solicita o nome do aluno
+        nome = input("Digite o nome do aluno: ")
+        
+        # Solicita as 3 notas do aluno
+        nota1 = float(input("Digite a primeira nota: "))
+        nota2 = float(input("Digite a segunda nota: "))
+        nota3 = float(input("Digite a terceira nota: "))
+        
+        # Calcula a média do aluno
+        media = (nota1 + nota2 + nota3) / 3
+        
+        # Verifica a aprovação ou reprovação
+        if media >= 7.0:
+            status = "Aprovado"
+        else:
+            status = "Reprovado"
+        
+        # Exibe o nome, notas, média e status do aluno
+        print(f"\nAluno: {nome}")
+        print(f"Notas: {nota1}, {nota2}, {nota3}")
+        print(f"Média: {media:.2f}")
+        print(f"Status: {status}")
+        
+        # Adiciona a média do aluno à soma das médias
+        soma_medianotas += media
+    
+    # Calcula e exibe a média geral da turma
+    media_geral = soma_medianotas / num_alunos
+    print(f"\nMédia geral da turma: {media_geral:.2f}")
+
+# Chama a função para rodar o programa
+calcular_media()
