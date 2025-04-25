@@ -1,0 +1,8 @@
+# Cria uma lista com seis frutas
+lista_de_frutas = ["maçã", "banana", "laranja", "abacaxi", "uva", "manga"]
+
+# Converte a lista em uma tupla
+tupla_de_frutas = tuple(lista_de_frutas)
+
+# Exibe o conteúdo da tupla
+print(tupla_de_frutas)
